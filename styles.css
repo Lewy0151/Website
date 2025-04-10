@@ -2,3 +2,35 @@ body {
     font-family: monospace;
     font-size: 14px;
   }
+
+
+  .star {
+    background-color: white;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    /* Use absolute positioning so that the stars can be placed individually */
+    position: absolute;
+    animation: twinkle 1.5s infinite ease-in-out;
+    box-shadow: 0 0 8px white;
+  }
+
+  /* Cancer constellation shape (approximate Y/triangle style) */
+  .star-1 { top: 70px; left: 45%; }
+  .star-2 { top: 250px; left: 48%; }
+  .star-3 { top: 325px; left: 45%; }
+  .star-4 { top: 450px; left: 30%; }
+  .star-5 { top: 440px; left: 70%; }
+  .star-6 { top: 520px; left: 90%; }
+
+  @keyframes twinkle {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(0.8);
+      opacity: 0.5;
+    }
+  }
+  
